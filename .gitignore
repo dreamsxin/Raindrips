@@ -11,3 +11,5 @@ runtime/
 build/
 jsb/
 export/
+
+.DS_Store

@@ -1,5 +1,5 @@
 import { Global } from "../model/global";
-import { ItemType } from "../type/Itemtype";
+import { ItemType } from "../type/ItemTypeState";
 
 const { ccclass, property } = cc._decorator;
 
@@ -16,8 +16,6 @@ export default class Plane extends cc.Component {
 
     @property(cc.Prefab)
     bullet: cc.Prefab = null;
-
-
 
     public bulletType: BulletType = BulletType.one;
 
@@ -60,14 +58,16 @@ export default class Plane extends cc.Component {
                 this.canvas.addChild(bullet);
                 break;
             case BulletType.double:
-                let bulletl = cc.instantiate(this.bullet);
-                bulletl.position = this.node.position;
-                bulletl.x += 30;
-                this.canvas.addChild(bulletl);
-                let bulletr = cc.instantiate(this.bullet);
-                bulletr.position = this.node.position;
-                bulletr.x -= 30;
-                this.canvas.addChild(bulletr);
+                //左边子弹
+                let bulletLeft = cc.instantiate(this.bullet);
+                bulletLeft.position = this.node.position;
+                bulletLeft.x += 30;
+                this.canvas.addChild(bulletLeft);
+                //右边子弹
+                let bulletRight = cc.instantiate(this.bullet);
+                bulletRight.position = this.node.position;
+                bulletRight.x -= 30;
+                this.canvas.addChild(bulletRight);
                 break;
         }
     }
@@ -87,7 +87,7 @@ export default class Plane extends cc.Component {
         // }
     }
 
-    gameover() {
+    gameOver() {
         this.node.opacity = 0;
         this.unschedule(this.spawnBullet);
         cc.sys.localStorage.setItem('currentScore',Global.score);

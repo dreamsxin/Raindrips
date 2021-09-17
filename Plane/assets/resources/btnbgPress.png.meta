@@ -1,6 +1,7 @@
 {
-  "ver": "2.3.5",
+  "ver": "2.3.7",
   "uuid": "3acb1dd6-52e6-4ce2-9d11-c4a1823181e9",
+  "importer": "texture",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -12,8 +13,9 @@
   "platformSettings": {},
   "subMetas": {
     "btnbgPress": {
-      "ver": "1.0.4",
+      "ver": "1.0.6",
       "uuid": "676f80c8-9976-4144-bc41-e644646af110",
+      "importer": "sprite-frame",
       "rawTextureUuid": "3acb1dd6-52e6-4ce2-9d11-c4a1823181e9",
       "trimType": "auto",
       "trimThreshold": 1,

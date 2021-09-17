@@ -1,4 +1,4 @@
-import { ItemType } from "../type/Itemtype";
+import * as ItemType_1 from "../type/ItemTypeState";
 
 const { ccclass, property } = cc._decorator;
 
@@ -11,21 +11,21 @@ export default class UFOItem extends cc.Component {
 	@property(cc.SpriteFrame)
 	fire: cc.SpriteFrame = null
 
-	public itemType: ItemType = ItemType.bomb;
+	public itemType: ItemType_1.ItemType = ItemType_1.ItemType.bomb;
 
 	onLoad() {
 
 	}
 
 	start() {
-		let type: ItemType = Math.random() > 0.5 ? ItemType.bomb : ItemType.fire
+		let type: ItemType_1.ItemType = Math.random() > 0.5 ? ItemType_1.ItemType.bomb : ItemType_1.ItemType.fire
 		let sprite = this.node.getComponent(cc.Sprite)
 		this.itemType = type;
 		switch (type) {
-			case ItemType.bomb:
+			case ItemType_1.ItemType.bomb:
 				sprite.spriteFrame = this.bomb
 				break
-			case ItemType.fire:
+			case ItemType_1.ItemType.fire:
 				sprite.spriteFrame = this.fire
 
 				break

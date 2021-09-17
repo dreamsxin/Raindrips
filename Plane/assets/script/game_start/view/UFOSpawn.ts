@@ -1,4 +1,4 @@
-import { ItemType } from "../type/Itemtype";
+import { ItemType } from "../type/ItemTypeState";
 
 const { ccclass, property } = cc._decorator;
 

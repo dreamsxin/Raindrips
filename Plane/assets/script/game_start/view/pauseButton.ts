@@ -6,14 +6,12 @@ export default class NewClass extends cc.Component {
 
     @property(cc.Node)
     label: cc.Node = null;
-    
-  
 
     // onLoad () {}
 
     start () {
-        let sprite;
     }
+    
     isPause:boolean=false;
     // update (dt) {}
 

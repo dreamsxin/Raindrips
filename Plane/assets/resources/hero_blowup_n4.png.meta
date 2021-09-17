@@ -1,6 +1,7 @@
 {
-  "ver": "2.3.5",
+  "ver": "2.3.7",
   "uuid": "b8c3f454-c4b4-40f8-a28a-1e8cb653aa46",
+  "importer": "texture",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -12,8 +13,9 @@
   "platformSettings": {},
   "subMetas": {
     "hero_blowup_n4": {
-      "ver": "1.0.4",
+      "ver": "1.0.6",
       "uuid": "54da0a7f-cd42-417b-bb78-c8be87210c21",
+      "importer": "sprite-frame",
       "rawTextureUuid": "b8c3f454-c4b4-40f8-a28a-1e8cb653aa46",
       "trimType": "auto",
       "trimThreshold": 1,
